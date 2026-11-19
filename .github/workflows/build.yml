@@ -57,6 +57,7 @@ jobs:
         with:
           name: m-bootloader-${{ github.sha }}
           if-no-files-found: error
+          retention-days: 1 # a hand-over to the release job, which publishes the files
           path: |
             build/fm1/uboot.boot
             build/smk37/uboot.boot
